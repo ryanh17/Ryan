@@ -22,7 +22,7 @@ public class Main {
             computerChoice = "paper";
         }else {
             computerChoice = "scissors";
-        }
+        } //sets each random number generated to a string
 
         if(userChoice == computerChoice){
             System.out.println("Tie, you both chose " + userChoice);
