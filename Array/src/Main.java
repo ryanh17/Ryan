@@ -13,13 +13,18 @@ public class Main {
         a.remove(a.size() - 1);
     }
 
+    public static void insertValues(ArrayList a, int pos, int value){
+        a.add(pos,value);
+    }
+
     public static void main(String[] args) {
         nums.add(input.nextInt());
         nums.add(input.nextInt());
         nums.add(input.nextInt());
         nums.add(input.nextInt());
-        addValues(2);
-        deleteValues(nums);
+        //addValues(2);
+        //deleteValues(nums);
+        insertValues(nums, 2,9);
         System.out.println(nums);
     }
 }
