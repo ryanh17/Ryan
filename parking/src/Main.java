@@ -13,24 +13,16 @@ public class Main {
         ArrayList today = new ArrayList();
         int occupiedBothDays = 0;
         int i = 0;
-        int n = 0;
 
         while (i < parkingSpaces){
             char y = yesterdayParking.charAt(i);
             char t = todayParking.charAt(i);
             yesterday.add(y);
             today.add(t);
-            if(yesterday.get(i).equals("C") && today.get(i).equals("C")){
+            if(yesterday.get(i).equals('C') && today.get(i).equals('C')){
                 occupiedBothDays++;
             }
             i++;
-        }
-        yesterday.toString();
-        today.toString();
-        System.out.println(yesterday);
-        if(yesterday.get(n).equals("C") && today.get(n).equals("C")){
-            occupiedBothDays++;
-            n++;
         }
         System.out.println(occupiedBothDays);
     }
