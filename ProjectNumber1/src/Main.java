@@ -36,6 +36,7 @@ public class Main {
     static String problemThree(String s){
         String alphabet = "abcdefghijklmnopqrstuvwxyz";
         ArrayList answer = new ArrayList();
+        ArrayList preAnswer = new ArrayList();
         ArrayList alphaList = new ArrayList();
         ArrayList characters = new ArrayList();
         int x = 0;
@@ -55,10 +56,24 @@ public class Main {
         System.out.println(alphaList);
         System.out.println(characters);
         System.out.println(characters.size());
-        for(int i = 0; i<s.length() - 1;) {
-            if ((int)characters.get(i) <= (int)characters.get(i + 1)) {
-                answer.add(characters.get(i));
-                answer.add(characters.get(i + 1));
+        for(int i = 1; i<s.length() - 1;) {
+            if ((int)characters.get(i) >= (int)characters.get(i - 1)) {
+                preAnswer.add(characters.get(i));
+                preAnswer.add(characters.get(i + 1));
+                i = i + 2;
+            }else{
+                preAnswer.add(46);
+                i++;
+            }
+
+        }
+        for (int i = 0; i < (preAnswer.size());){
+            answer.add(preAnswer.get(i));
+            i++;
+        }
+        for (int i = 0; i < preAnswer.size() - 1;){
+            if((int)preAnswer.get(i) > (int)preAnswer.get(i + 1)){
+                answer.add(i + 2,46);
             }
             i++;
         }
