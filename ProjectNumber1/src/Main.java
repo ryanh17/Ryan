@@ -87,7 +87,7 @@ public class Main {
         all possible cases.  If you have 100% success then there is no bugs in your methods.
          */
         String s = "azcbobobegghakl";
-        //System.out.println("Number of vowels: " + problemOne(s));
+        System.out.println("Number of vowels: " + problemOne(s));
         System.out.println("Number of times bob occurs is: " + problemTwo(s));
         System.out.println("Longest substring in alphabetical order is: " + problemThree(s));
     }
