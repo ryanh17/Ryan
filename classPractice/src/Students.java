@@ -1,11 +1,22 @@
+import java.util.ArrayList;
+
 public class Students {
     private String firstName;
-    private int id;
+    private static int id = 0;
+    ArrayList studentCourses = new ArrayList();
 
-    Students(String firstName, int id){
+    Students(String firstName){
         this.firstName = firstName;
-        this.id = id;
+        id++;
+        System.out.println(firstName + id);
     }
 
-    public
+    public void addCourse(String course){
+        this.studentCourses.add(course);
+    }
+
+    public ArrayList getStudentCourses(){
+        return studentCourses;
+    }
+
 }
