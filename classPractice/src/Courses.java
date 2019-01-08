@@ -8,7 +8,10 @@ public class Courses {
     Courses(String subjectName, int studentGrade){
         this.subjectName = subjectName;
         this.studentGrade.add(studentGrade);
-        System.out.println(subjectName);
+    }
+
+    public String getSubjectName() {
+        return subjectName;
     }
 
     public int avgGrade(){
