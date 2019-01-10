@@ -26,4 +26,8 @@ public class Courses {
         this.subjectName = subjectName;
         this.studentGrade.add(studentGrade);
     }
+
+    public String toString(){
+        return subjectName;
+    }
 }

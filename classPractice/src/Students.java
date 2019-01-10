@@ -9,7 +9,7 @@ public class Students {
     Students(String firstName){
         this.firstName = firstName;
         id++;
-        personalId = id + 1;
+        personalId = id;
     }
 
     public void addCourse(String course){
@@ -20,12 +20,16 @@ public class Students {
         return firstName;
     }
 
-    public static int getId() {
-        return id;
+    public int getId() {
+        return personalId;
     }
 
     public ArrayList getStudentCourses(){
         return studentCourses;
+    }
+
+    public String toString(){
+        return firstName + personalId;
     }
 
 }
