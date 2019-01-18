@@ -24,7 +24,7 @@ public class Main {
             characters.add(x);
             i++;
         }
-        for (int i = 0; i<= (s.length() - 2);){ //for loop for checking for 'b' 'o' 'b' in ArrayList
+        for (int i = 0; i<= (s.length() - 3);){ //for loop for checking for 'b' 'o' 'b' in ArrayList
             if((characters.get(i).equals('b')) && (characters.get(i + 1).equals('o')) && (characters.get(i + 2).equals('b'))){
                 answer++; //checks if first char is 'b' then checks if next is 'o' and then checks if next one is 'b'. If all true than add one to answer
             }
