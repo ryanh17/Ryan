@@ -1,14 +1,13 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        String inputDistances =  "3 10 12 5"; //input.nextLine();
+        String inputDistances =  input.nextLine();
         ArrayList nums = new ArrayList();
         String x ="";
-        String outputOne = "0";
+        String output = "0";
         int y;
 
         for(int i = 0; i < inputDistances.length(); i++){
@@ -21,17 +20,43 @@ public class Main {
             }
         }
         nums.add(x);
-        System.out.println(nums);
 
-        outputOne = outputOne + " " + nums.get(0).toString();
+        //PRINTING STUFF BELOW
+
+        output = output + " " + nums.get(0).toString();
         y = Integer.parseInt(nums.get(1).toString()) + Integer.parseInt(nums.get(0).toString());
-        outputOne = outputOne + " " + y;
+        output = output + " " + y;
         y = y + Integer.parseInt(nums.get(2).toString());
-        outputOne = outputOne + " " + y;
+        output = output + " " + y;
         y = y + Integer.parseInt(nums.get(3).toString());
-        outputOne = outputOne + " " + y;
+        output = output + " " + y;
+        System.out.println(output); //output 1
 
+        output = nums.get(0).toString() + " " + "0 " + nums.get(1).toString();
+        y = Integer.parseInt(nums.get(1).toString()) + Integer.parseInt(nums.get(2).toString());
+        output = output + " " + y;
+        y = y + Integer.parseInt(nums.get(3).toString());
+        output = output + " " + y;
+        System.out.println(output); //output 2
 
-        System.out.println(outputOne);
+        y = Integer.parseInt(nums.get(0).toString()) + Integer.parseInt(nums.get(1).toString());
+        output = "" + y + " " + nums.get(1).toString() + " 0 " + nums.get(2).toString();
+        y = Integer.parseInt(nums.get(2).toString()) + Integer.parseInt(nums.get(3).toString());
+        output = output + " " + y;
+        System.out.println(output); //output 3
+
+        y = Integer.parseInt(nums.get(0).toString()) + Integer.parseInt(nums.get(1).toString())  + Integer.parseInt(nums.get(2).toString());
+        output = "" + y;
+        y = y - Integer.parseInt(nums.get(0).toString());
+        output = output + " " + y + " " + nums.get(2).toString() + " 0 " + nums.get(3).toString();
+        System.out.println(output); //output 4
+
+        y = Integer.parseInt(nums.get(0).toString()) + Integer.parseInt(nums.get(1).toString())  + Integer.parseInt(nums.get(2).toString()) + Integer.parseInt(nums.get(3).toString());
+        output = "" + y;
+        y = y - Integer.parseInt(nums.get(0).toString());
+        output = output + " " + y;
+        y = y - Integer.parseInt(nums.get(1).toString());
+        output = output + " " + y + " " + nums.get(3).toString() + " 0";
+        System.out.println(output);
     }
 }
