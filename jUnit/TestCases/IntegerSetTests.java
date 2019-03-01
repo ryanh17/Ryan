@@ -36,4 +36,30 @@ public class IntegerSetTests {
         testSet.insert(3);
         assertEquals(testSet.size(), 1);
     }
+
+    @Test
+    public void testRemoveNumNotThere(){
+        //check if number is not already in set
+        assertEquals(testSet.size(), 0);
+        assertFalse(testSet.contains(3));
+        //removes a number
+        testSet.remove(3);
+        //checks if set is still same
+        assertEquals(testSet.size(), 0);
+        assertFalse(testSet.contains(3));
+    }
+
+    @Test
+    public void testRemoveNumAlreadyThere(){
+        //inserts number
+        testSet.insert(3);
+        //check if number in set
+        assertEquals(testSet.size(), 1);
+        assertTrue(testSet.contains(3));
+        //remove number
+        testSet.remove(3);
+        //checks if number removed
+        assertEquals(testSet.size(), 0);
+        assertFalse(testSet.contains(3));
+    }
 }
