@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Customer {
     private int accountNumber;
-    private ArrayList<Deposit> deposits;
+    private ArrayList<Deposit> deposits = new ArrayList<>();
     private ArrayList<Withdraw> withdraws;
     private double checkBalance;
     private double savingBalance;
@@ -21,23 +21,25 @@ public class Customer {
         //constructor code here
         this.name = name;
         this.accountNumber = accountNumber;
-        Date date = new Date();
-        deposit(checkDeposit, date, CHECKING);
-        deposit(savingDeposit, date, SAVING);
+        deposit(checkDeposit, CHECKING);
+        deposit(savingDeposit, SAVING);
     }
 
-    public double deposit(double amt, Date date, String account){
+    public double deposit(double amt, String account){
         //your code here
-        Deposit d = new Deposit(amt, date, account);
+        Deposit d = new Deposit(amt, account);
         deposits.add(d);
         return 0;
     }
-    public double withdraw(double amt, Date date, String account){
+    public double withdraw(double amt, String account){
         //your code here
+        Withdraw w = new Withdraw(amt, account);
+        withdraws.add(w);
         return 0;
     }
     private boolean checkOverdraft(double amt, String account){
         //your code here
+        if (account > )
         return false;
     }
     //do not modify

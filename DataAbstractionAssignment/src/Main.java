@@ -3,6 +3,7 @@ public class Main {
     public static void main(String[] args) {
         Customer ryan = new Customer("Ryan", 123, 300, 200);
         Date date = new Date();
-        System.out.println(date);
+        ryan.deposit(200, Customer.SAVING);
+        ryan.displayDeposits();
     }
 }
