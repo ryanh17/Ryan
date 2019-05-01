@@ -33,4 +33,13 @@ public class Tests {
         guest.deposit(300, Customer.SAVING);
         assertEquals(guest.getSavingBalance(), 500.0);
     }
+    @Test
+    public void testCustomerWithdraw(){
+        assertEquals(guest.getCheckBalance(), 100.0);
+        assertEquals(guest.getSavingBalance(), 200.0);
+        guest.withdraw(50, Customer.CHECKING);
+        guest.withdraw(150, Customer.SAVING);
+        assertEquals(guest.getCheckBalance(), 50.0);
+        assertEquals(guest.getSavingBalance(), 50.0);
+    }
 }

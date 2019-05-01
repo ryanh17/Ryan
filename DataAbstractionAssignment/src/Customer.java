@@ -17,7 +17,6 @@ public class Customer {
     private Random ran = new Random();
 
     Customer(){
-        //create default constructor
         accountNumber = ran.nextInt(100);
         name = String.valueOf(accountNumber);
         deposit(1000, CHECKING);
@@ -26,15 +25,16 @@ public class Customer {
 
     }
     Customer(String name, int accountNumber, double checkDeposit, double savingDeposit){
-        //constructor code here
         this.name = name;
         this.accountNumber = accountNumber;
         deposit(checkDeposit, CHECKING);
         deposit(savingDeposit, SAVING);
     }
 
+    //Requires: double, string
+    //Modifies: this
+    //Effects: adds deposit to specified account
     public double deposit(double amt, String account){
-        //your code here
         Deposit d = new Deposit(amt, account);
         deposits.add(d);
         if (account.equals(CHECKING)){
@@ -44,8 +44,11 @@ public class Customer {
         }
         return 0;
     }
+
+    //Requires: double, string
+    //Modifies: this
+    //Effects: withdraw from specified account if account balance > withdraw
     public double withdraw(double amt, String account){
-        //your code here
         if (!(checkOverdraft(amt, account))){
             Withdraw w = new Withdraw(amt, account);
             withdraws.add(w);
