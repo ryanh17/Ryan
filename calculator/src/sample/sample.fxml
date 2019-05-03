@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="428.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Button layoutX="25.0" layoutY="296.0" mnemonicParsing="false" onAction="#buttonOne" prefHeight="55.0" prefWidth="55.0" text="1" />
+      <TextField fx:id="display" layoutX="23.0" layoutY="14.0" prefHeight="103.0" prefWidth="275.0" />
+      <Button layoutX="96.0" layoutY="296.0" mnemonicParsing="false" onAction="#buttonTwo" prefHeight="55.0" prefWidth="55.0" text="2" />
+      <Button layoutX="171.0" layoutY="296.0" mnemonicParsing="false" onAction="#buttonThree" prefHeight="55.0" prefWidth="55.0" text="3" />
+      <Button layoutX="25.0" layoutY="230.0" mnemonicParsing="false" onAction="#buttonFour" prefHeight="55.0" prefWidth="55.0" text="4" />
+      <Button layoutX="96.0" layoutY="230.0" mnemonicParsing="false" onAction="#buttonFive" prefHeight="55.0" prefWidth="55.0" text="5" />
+      <Button layoutX="171.0" layoutY="230.0" mnemonicParsing="false" onAction="#buttonSix" prefHeight="55.0" prefWidth="55.0" text="6" />
+      <Button layoutX="25.0" layoutY="163.0" mnemonicParsing="false" onAction="#buttonSeven" prefHeight="55.0" prefWidth="55.0" text="7" />
+      <Button layoutX="96.0" layoutY="163.0" mnemonicParsing="false" onAction="#buttonEight" prefHeight="55.0" prefWidth="55.0" text="8" />
+      <Button layoutX="171.0" layoutY="163.0" mnemonicParsing="false" onAction="#buttonNine" prefHeight="55.0" prefWidth="55.0" text="9" />
+      <Button layoutX="96.0" layoutY="359.0" mnemonicParsing="false" onAction="#buttonZero" prefHeight="55.0" prefWidth="55.0" text="0" />
+      <Button layoutX="241.0" layoutY="297.0" mnemonicParsing="false" onAction="#buttonMultiply" prefHeight="55.0" prefWidth="55.0" text="x" />
+      <Button layoutX="241.0" layoutY="231.0" mnemonicParsing="false" onAction="#buttonMinus" prefHeight="55.0" prefWidth="55.0" text="-" />
+      <Button layoutX="241.0" layoutY="164.0" mnemonicParsing="false" onAction="#buttonPlus" prefHeight="55.0" prefWidth="55.0" text="+" />
+      <Button layoutX="241.0" layoutY="359.0" mnemonicParsing="false" onAction="#buttonDivide" prefHeight="55.0" prefWidth="55.0" text="/" />
+      <Button layoutX="171.0" layoutY="359.0" mnemonicParsing="false" onAction="#buttonEquals" prefHeight="55.0" prefWidth="55.0" text="=" />
+      <Button layoutX="25.0" layoutY="359.0" mnemonicParsing="false" onAction="#buttonDecimal" prefHeight="55.0" prefWidth="55.0" text="." />
+      <Button layoutX="23.0" layoutY="124.0" mnemonicParsing="false" onAction="#buttonClear" prefHeight="25.0" prefWidth="275.0" text="CLEAR" />
+   </children>
+</AnchorPane>
