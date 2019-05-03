@@ -11,7 +11,6 @@ public class Deposit {
     }
 
     public String toString(){
-        //your code here
         return "Deposit of: $" + amount + " Date: " + date + " into account: " + account;
     }
 }

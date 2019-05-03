@@ -52,12 +52,16 @@ public class Customer {
         if (!(checkOverdraft(amt, account))){
             Withdraw w = new Withdraw(amt, account);
             withdraws.add(w);
+            if(account.equals(CHECKING)){
+                checkBalance -= amt;
+            }else{
+                savingBalance -= amt;
+            }
         }
         return 0;
     }
 
     private boolean checkOverdraft(double amt, String account){
-        //your code here
         if (account.equals(CHECKING)){
             if (amt > checkBalance){
                 return true;
