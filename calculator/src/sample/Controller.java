@@ -50,21 +50,48 @@ public class Controller {
 
     public void buttonMultiply(ActionEvent actionEvent) {
         display.setText(display.getText() + "x");
+        clicked = false;
     }
 
     public void buttonMinus(ActionEvent actionEvent) {
         display.setText(display.getText() + "-");
+        clicked = false;
     }
 
     public void buttonPlus(ActionEvent actionEvent) {
         display.setText(display.getText() + "+");
+        clicked = false;
     }
 
     public void buttonDivide(ActionEvent actionEvent) {
         display.setText(display.getText() + "/");
+        clicked = false;
     }
 
     public void buttonEquals(ActionEvent actionEvent) {
+        String temp = "";
+        double ans = 0;
+        double one = 0;
+        double two = 0;
+        for(int i = 0; i < display.getLength(); i++){
+            if(Character.isDigit(display.getText().charAt(i)) == true){
+                temp += display.getText().charAt(i);
+            }else{
+                one = Double.parseDouble(temp);
+                temp = "";
+                for (int x = 0 + i; x < display.getLength(); x++ ){
+                    if(Character.isDigit(display.getText().charAt(i)) == true) {
+                        temp += display.getText().charAt(i);
+                    }
+                }
+                two = Double.parseDouble(temp);
+                temp = "";
+                if (display.getText().charAt(i) == 'x'){
+                    ans = one * two;
+                    display.setText(Double.toString(ans));
+                }
+            }
+        }
         //display.getText().charAt()
     }
 
