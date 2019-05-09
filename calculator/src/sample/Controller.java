@@ -4,9 +4,13 @@ import com.sun.org.apache.xpath.internal.operations.Bool;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
 
+import java.util.ArrayList;
+
 public class Controller {
     public TextField display;
     public Boolean clicked = false;
+    ArrayList numbers = new ArrayList();
+    ArrayList operators = new ArrayList();
 
     public void buttonOne(ActionEvent actionEvent) {
         display.setText(display.getText() + "1");
@@ -70,29 +74,54 @@ public class Controller {
 
     public void buttonEquals(ActionEvent actionEvent) {
         String temp = "";
+        double dTemp = 0;
+        for (int i = 0; i < display.getLength(); i++){
+            if(Character.isDigit(display.getText().charAt(i)) == true){
+                temp += display.getText().charAt(i);
+            }else{
+                dTemp = Double.parseDouble(temp);
+                temp = "";
+                numbers.add(dTemp);
+                operators.add(display.getText().charAt(i))
+            }
+        }
+
+
+
+
+
+
+
+        /*String temp = "";
+        int x = 0;
         double ans = 0;
         double one = 0;
         double two = 0;
-        for(int i = 0; i < display.getLength(); i++){
+        for(int i = 0 + x; i < display.getLength(); i++){
             if(Character.isDigit(display.getText().charAt(i)) == true){
                 temp += display.getText().charAt(i);
             }else{
                 one = Double.parseDouble(temp);
                 temp = "";
-                for (int x = 0 + i; x < display.getLength(); x++ ){
-                    if(Character.isDigit(display.getText().charAt(i)) == true) {
-                        temp += display.getText().charAt(i);
+                for (x = 1 + i; x < display.getLength(); x++ ){
+                    if(Character.isDigit(display.getText().charAt(x)) == true) {
+                        temp += display.getText().charAt(x);
+                    }else{
+                        two = Double.parseDouble(temp);
+                        temp = "";
+                        break;
                     }
+                    break;
                 }
-                two = Double.parseDouble(temp);
-                temp = "";
-                if (display.getText().charAt(i) == 'x'){
-                    ans = one * two;
-                    display.setText(Double.toString(ans));
+
                 }
+            display.setText(Double.toString(two));
+            if (display.getText().charAt(i) == 'x'){
+                ans = one * two;
+                //display.setText(Double.toString(ans));
             }
         }
-        //display.getText().charAt()
+        //display.getText().charAt()*/
     }
 
     public void buttonDecimal(ActionEvent actionEvent) {
