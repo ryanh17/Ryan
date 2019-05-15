@@ -9,8 +9,8 @@ import java.util.ArrayList;
 public class Controller {
     public TextField display;
     public Boolean clicked = false;
-    ArrayList numbers = new ArrayList();
-    ArrayList operators = new ArrayList();
+    ArrayList<Double> numbers = new ArrayList<>();
+    ArrayList<String> operators = new ArrayList<>();
 
     public void buttonOne(ActionEvent actionEvent) {
         display.setText(display.getText() + "1");
@@ -53,7 +53,7 @@ public class Controller {
     }
 
     public void buttonMultiply(ActionEvent actionEvent) {
-        display.setText(display.getText() + "x");
+        display.setText(display.getText() + "*");
         clicked = false;
     }
 
@@ -73,59 +73,44 @@ public class Controller {
     }
 
     public void buttonEquals(ActionEvent actionEvent) {
+        System.out.println("this");
         String temp = "";
-        double dTemp = 0;
         for (int i = 0; i < display.getLength(); i++){
-            if(Character.isDigit(display.getText().charAt(i)) == true){
+            if(Character.isDigit(display.getText().charAt(i))){
                 temp += display.getText().charAt(i);
+                System.out.println(temp);
+            }else if(display.getText().charAt(i) == ','){
+                temp += display.getText().charAt(i);
+                System.out.println(temp);
             }else{
-                dTemp = Double.parseDouble(temp);
+                System.out.println("hello");
+                numbers.add(Double.parseDouble(temp));
                 temp = "";
-                numbers.add(dTemp);
-                operators.add(display.getText().charAt(i))
+                operators.add(String.valueOf(display.getText().charAt(i)));
+                System.out.println(display.getText().charAt(i));
+            }
+            System.out.println("unend");
+        }
+        numbers.add(Double.parseDouble(temp));
+        temp = "";
+        double ans = numbers.get(0);
+        for (int i = 0; i < numbers.size() - 1;i++){
+            System.out.println("unend2electricboogaloo");
+            System.out.println(operators.get(0).equals("+"));
+            System.out.println(operators.toString());
+            System.out.println(operators.get(0));
+            System.out.println(numbers.get(1));
+            if (operators.get(i).equals("+")){
+                System.out.println("running");
+                ans += numbers.get(i + 1);
+                System.out.println(ans);
+                display.setText(Double.toString(ans));
             }
         }
-
-
-
-
-
-
-
-        /*String temp = "";
-        int x = 0;
-        double ans = 0;
-        double one = 0;
-        double two = 0;
-        for(int i = 0 + x; i < display.getLength(); i++){
-            if(Character.isDigit(display.getText().charAt(i)) == true){
-                temp += display.getText().charAt(i);
-            }else{
-                one = Double.parseDouble(temp);
-                temp = "";
-                for (x = 1 + i; x < display.getLength(); x++ ){
-                    if(Character.isDigit(display.getText().charAt(x)) == true) {
-                        temp += display.getText().charAt(x);
-                    }else{
-                        two = Double.parseDouble(temp);
-                        temp = "";
-                        break;
-                    }
-                    break;
-                }
-
-                }
-            display.setText(Double.toString(two));
-            if (display.getText().charAt(i) == 'x'){
-                ans = one * two;
-                //display.setText(Double.toString(ans));
-            }
-        }
-        //display.getText().charAt()*/
     }
 
     public void buttonDecimal(ActionEvent actionEvent) {
-        if (clicked == false){
+        if (!clicked){
             display.setText(display.getText() + ".");
         }
         clicked = true;
