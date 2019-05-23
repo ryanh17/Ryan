@@ -73,37 +73,34 @@ public class Controller {
     }
 
     public void buttonEquals(ActionEvent actionEvent) {
-        System.out.println("this");
+        double ans = 0;
         String temp = "";
         for (int i = 0; i < display.getLength(); i++){
             if(Character.isDigit(display.getText().charAt(i))){
                 temp += display.getText().charAt(i);
-                System.out.println(temp);
-            }else if(display.getText().charAt(i) == ','){
+            }else if(display.getText().charAt(i) == '.'){
                 temp += display.getText().charAt(i);
-                System.out.println(temp);
             }else{
-                System.out.println("hello");
                 numbers.add(Double.parseDouble(temp));
                 temp = "";
                 operators.add(String.valueOf(display.getText().charAt(i)));
-                System.out.println(display.getText().charAt(i));
             }
-            System.out.println("unend");
         }
         numbers.add(Double.parseDouble(temp));
         temp = "";
-        double ans = numbers.get(0);
+        ans = numbers.get(0);
         for (int i = 0; i < numbers.size() - 1;i++){
-            System.out.println("unend2electricboogaloo");
-            System.out.println(operators.get(0).equals("+"));
-            System.out.println(operators.toString());
-            System.out.println(operators.get(0));
-            System.out.println(numbers.get(1));
             if (operators.get(i).equals("+")){
-                System.out.println("running");
                 ans += numbers.get(i + 1);
-                System.out.println(ans);
+                display.setText(Double.toString(ans));
+            }else if (operators.get(i).equals("*")){
+                ans *= numbers.get(i + 1);
+                display.setText(Double.toString(ans));
+            }else if (operators.get(i).equals("/")){
+                ans /= numbers.get(i + 1);
+                display.setText(Double.toString(ans));
+            }else if (operators.get(i).equals("-")){
+                ans -= numbers.get(i + 1);
                 display.setText(Double.toString(ans));
             }
         }
@@ -118,5 +115,7 @@ public class Controller {
 
     public void buttonClear(ActionEvent actionEvent) {
         display.clear();
+        numbers.clear();
+        operators.clear();
     }
 }
