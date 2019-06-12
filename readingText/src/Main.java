@@ -6,46 +6,39 @@ import java.util.ArrayList;
 
 public class Main {
     public static ArrayList sentences = new ArrayList();
-    static String blah = "";
+    //static String blah = "";
     public static void main(String[] args) throws IOException {
         FileReader fr = new FileReader("ProgrammingHistory.txt");
         BufferedReader br = new BufferedReader(fr);
         String line;
 
-
         while((line = br.readLine()) != null){
-            blah += line;
+            //blah += line;
+            sentences.add(line);
         }
 
-        String temp = "";
-        for (int i = 0; i < blah.length(); i++){
-            if (blah.charAt(i) != '.'){
+        //String temp = "";
+        /*for (int i = 0; i < blah.length(); i++){
+            if (blah.charAt(i) != '.' && blah.charAt(i + 1) != '['){
                 temp += blah.charAt(i);
+            } else if(blah.charAt(i + 1) == '['){
+                temp = temp + ".[" + blah.charAt(i+2) + "]";
+                sentences.add(temp);
+                i = i + 3;
             }else{
-                if (blah.charAt(i + 1) == '['){
-                    temp += ".";
-                    temp += blah.charAt(i+1);
-                    temp += blah.charAt(i+2);
-                    temp += blah.charAt(i+3);
-                    sentences.add(temp);
-                    temp = "";
-                    i = i +3;
-                }else{
-                    sentences.add((temp + "."));
-                    temp = "";
-                }
+                temp += blah.charAt(i);
+                sentences.add(temp);
             }
-        }
+        }*/
         search("punch");
-        System.out.println(sentences.get(2));
+        System.out.println(sentences.get(0));
     }
 
     static void search(String word){
         for(int i = 0; i<sentences.size(); i++){
             String temp = sentences.get(i).toString();
             if (temp.contains(word)){
-                String temp2;
-                System.out.println("Index Position: " + i);
+                System.out.println("Index Position: " + i + " " + temp.indexOf(word));
             }
         }
     }
