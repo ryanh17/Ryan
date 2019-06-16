@@ -6,19 +6,28 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <ListView fx:id="fList" layoutX="340.0" layoutY="16.0" onMouseClicked="#displayFriend" prefHeight="308.0" prefWidth="321.0" />
-      <TextField fx:id="f_Name" layoutX="91.0" layoutY="77.0" promptText="Name" />
-      <TextField fx:id="f_ph" layoutX="91.0" layoutY="116.0" promptText="Phone Number" />
-      <TextField fx:id="f_mm" layoutX="91.0" layoutY="180.0" prefHeight="25.0" prefWidth="40.0" promptText="MM" />
-      <TextField fx:id="f_dd" layoutX="146.0" layoutY="180.0" prefHeight="25.0" prefWidth="40.0" promptText="DD" />
-      <TextField fx:id="f_yy" layoutX="200.0" layoutY="180.0" prefHeight="25.0" prefWidth="40.0" promptText="YY" />
-      <Label layoutX="144.0" layoutY="152.0" text="Birthday" />
-      <Button layoutX="92.0" layoutY="226.0" mnemonicParsing="false" onAction="#addFriend" prefHeight="25.0" prefWidth="149.0" text="Add" />
-      <Label fx:id="l_name" layoutX="722.0" layoutY="126.0" prefHeight="17.0" prefWidth="236.0" text="Name:" />
-      <Label fx:id="l_ph" layoutX="722.0" layoutY="153.0" prefHeight="17.0" prefWidth="236.0" text="Ph #:" />
-      <Label fx:id="l_birthday" layoutX="722.0" layoutY="178.0" prefHeight="17.0" prefWidth="236.0" text="Birthday (M/D/Y) : " />
-      <Button layoutX="426.0" layoutY="341.0" mnemonicParsing="false" onAction="#deleteFriend" prefHeight="25.0" prefWidth="149.0" text="Delete" />
+      <Button layoutX="450.0" layoutY="346.0" mnemonicParsing="false" onAction="#masterList" text="Return To Master List" />
+      <ListView fx:id="fList" layoutX="450.0" layoutY="46.0" onMouseClicked="#displayFriend" prefHeight="285.0" prefWidth="321.0" />
+      <TextField fx:id="f_Name" layoutX="47.0" layoutY="44.0" promptText="Name" />
+      <TextField fx:id="f_ph" layoutX="47.0" layoutY="83.0" promptText="Phone Number" />
+      <TextField fx:id="f_mm" layoutX="47.0" layoutY="147.0" prefHeight="25.0" prefWidth="40.0" promptText="MM" />
+      <TextField fx:id="f_dd" layoutX="102.0" layoutY="147.0" prefHeight="25.0" prefWidth="40.0" promptText="DD" />
+      <TextField fx:id="f_yy" layoutX="156.0" layoutY="147.0" prefHeight="25.0" prefWidth="40.0" promptText="YY" />
+      <Label layoutX="100.0" layoutY="119.0" text="Birthday" />
+      <Button layoutX="48.0" layoutY="192.0" mnemonicParsing="false" onAction="#addFriend" prefHeight="25.0" prefWidth="149.0" text="Add Friend" />
+      <Label fx:id="l_name" layoutX="793.0" layoutY="124.0" prefHeight="17.0" prefWidth="165.0" text="Name:" />
+      <Label fx:id="l_ph" layoutX="793.0" layoutY="151.0" prefHeight="17.0" prefWidth="165.0" text="Ph #:" />
+      <Label fx:id="l_birthday" layoutX="793.0" layoutY="176.0" prefHeight="17.0" prefWidth="165.0" text="Birthday (M/D/Y) : " />
+      <Button layoutX="622.0" layoutY="346.0" mnemonicParsing="false" onAction="#deleteFriend" prefHeight="25.0" prefWidth="149.0" text="Delete" />
+      <Button layoutX="242.0" layoutY="181.0" mnemonicParsing="false" onAction="#loadFriends" prefHeight="25.0" prefWidth="180.0" text="Load Selected Friends List" />
+      <ListView fx:id="loadLists" layoutX="232.0" layoutY="45.0" prefHeight="126.0" prefWidth="200.0" />
+      <Button layoutX="258.0" layoutY="346.0" mnemonicParsing="false" onAction="#newFriendsList" prefHeight="25.0" prefWidth="149.0" text="Create New Friends List" />
+      <Label layoutX="288.0" layoutY="23.0" prefHeight="17.0" prefWidth="88.0" text="All Friends List" />
+      <TextField fx:id="f_fListName" layoutX="258.0" layoutY="315.0" prefHeight="25.0" prefWidth="149.0" promptText="New Friend List NAME" />
+      <Button layoutX="242.0" layoutY="217.0" mnemonicParsing="false" onAction="#addFriendToList" prefHeight="25.0" prefWidth="180.0" text="Add Selected Friend to List" />
+      <Label layoutX="577.0" layoutY="23.0" text="Friends View" />
+      <Label layoutX="232.0" layoutY="242.0" prefHeight="39.0" prefWidth="200.0" text="(select friend from &quot;Friends View&quot; and select a &quot;Friends List&quot;)" textAlignment="CENTER" wrapText="true" />
    </children>
 </AnchorPane>

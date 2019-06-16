@@ -21,8 +21,10 @@ public class Controller implements Initializable {
     public Label l_name;
     public Label l_ph;
     public Label l_birthday;
+    public ListView loadLists;
+    public TextField f_fListName;
     String line;
-    int line_num;
+    int line_num = 0;
 
     FileReader fr = new FileReader("save.txt");
     BufferedReader br = new BufferedReader(fr);
@@ -32,35 +34,42 @@ public class Controller implements Initializable {
     Integer load_dd;
     Integer load_yy;
 
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
             while ((line = br.readLine()) != null) {
                 line_num++;
-                System.out.println(br.readLine());
-                System.out.println(line_num);
                 if (line_num % 5 == 1){
-                    load_Name = br.readLine();
+                    load_Name = line;
                 }else if (line_num % 5 == 2){
-                    load_Ph = br.readLine();
+                    load_Ph = line;
                 }else if (line_num % 5 == 3){
-                    load_mm = Integer.valueOf(br.readLine());
+                    load_mm = Integer.valueOf(line);
                 }
                 else if (line_num % 5 == 4){
-                    load_dd = Integer.valueOf(br.readLine());
+                    load_dd = Integer.valueOf(line);
                 }
                 else if (line_num % 5 == 0){
-                    load_yy = Integer.valueOf(br.readLine());
+                    load_yy = Integer.valueOf(line);
                     Friend ror = new Friend(load_Name, load_Ph, load_mm, load_dd, load_yy);
                     fList.getItems().add(ror);
                 }
             }
+            br.close();
+            FileReader fr2 = new FileReader("friendslist.txt");
+            BufferedReader br2 = new BufferedReader(fr2);
+            while((line = br2.readLine()) != null){
+                loadLists.getItems().add(line);
+            }
+            br2.close();
         }catch(IOException e){
             e.printStackTrace();
         }
     }
 
-    public Controller() throws FileNotFoundException {
+    public Controller() throws IOException {
+
     }
 
     public void addFriend(ActionEvent actionEvent) throws IOException {
@@ -70,6 +79,7 @@ public class Controller implements Initializable {
         bw.write(f_Name.getText() + "\n" + f_ph.getText() + "\n" + f_mm.getText() + "\n" + f_dd.getText() + "\n" + f_yy.getText() + "\n");
         bw.close();
         fList.getItems().add(temp);
+
         f_Name.clear();
         f_ph.clear();
         f_mm.clear();
@@ -90,5 +100,74 @@ public class Controller implements Initializable {
         l_name.setText("Name: " + temp.getName());
         l_ph.setText("Ph #: " + temp.getPh());
         l_birthday.setText("Birthday (M/D/Y): " + temp.getB_Month() + "/" + temp.getB_Day() + "/" + temp.getB_Year());
+    }
+
+    public void loadFriends(ActionEvent actionEvent) throws IOException {
+        fList.getItems().clear();
+        FileReader fr = new FileReader(loadLists.getSelectionModel().getSelectedItem() + ".txt");
+        BufferedReader br = new BufferedReader(fr);
+        line_num =0;
+        while ((line = br.readLine()) != null) {
+            line_num++;
+            if (line_num % 5 == 1){
+                load_Name = line;
+            }else if (line_num % 5 == 2){
+                load_Ph = line;
+            }else if (line_num % 5 == 3){
+                load_mm = Integer.valueOf(line);
+            }
+            else if (line_num % 5 == 4){
+                load_dd = Integer.valueOf(line);
+            }
+            else if (line_num % 5 == 0){
+                load_yy = Integer.valueOf(line);
+                Friend ror = new Friend(load_Name, load_Ph, load_mm, load_dd, load_yy);
+                fList.getItems().add(ror);
+            }
+        }
+        br.close();
+    }
+
+    public void newFriendsList(ActionEvent actionEvent) throws IOException {
+        FileWriter fw = new FileWriter(f_fListName.getText() + ".txt", true);
+        loadLists.getItems().add(f_fListName.getText());
+        FileWriter fw2 = new FileWriter("friendslist.txt", true);
+        BufferedWriter bw2 = new BufferedWriter(fw2);
+        bw2.write(f_fListName.getText() + "\n");
+        bw2.close();
+    }
+
+    public void addFriendToList(ActionEvent actionEvent) throws IOException {
+        Friend temp;
+        temp = fList.getSelectionModel().getSelectedItem();
+        FileWriter fw = new FileWriter(loadLists.getSelectionModel().getSelectedItem()+ ".txt", true);
+        BufferedWriter bw = new BufferedWriter(fw);
+        bw.write(temp.getName() + "\n" + temp.getPh() + "\n" + temp.getB_Month() + "\n" + temp.getB_Day() + "\n" + temp.getB_Year() + "\n");
+        bw.close();
+    }
+
+    public void masterList(ActionEvent actionEvent) throws IOException {
+        fList.getItems().clear();
+        FileReader fr = new FileReader("save.txt");
+        BufferedReader br = new BufferedReader(fr);
+        while ((line = br.readLine()) != null) {
+            line_num++;
+            if (line_num % 5 == 1){
+                load_Name = line;
+            }else if (line_num % 5 == 2){
+                load_Ph = line;
+            }else if (line_num % 5 == 3){
+                load_mm = Integer.valueOf(line);
+            }
+            else if (line_num % 5 == 4){
+                load_dd = Integer.valueOf(line);
+            }
+            else if (line_num % 5 == 0){
+                load_yy = Integer.valueOf(line);
+                Friend ror = new Friend(load_Name, load_Ph, load_mm, load_dd, load_yy);
+                fList.getItems().add(ror);
+            }
+        }
+        br.close();
     }
 }
