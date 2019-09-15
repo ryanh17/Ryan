@@ -2,128 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="723f8982-b3bd-4135-9c45-5d06db1a3d51" name="Default Changelist" comment="" />
-    <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1850101857">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="799" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="799" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="1667282953">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="603" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="603" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-221">
-              <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LinearEq.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestCases/linearEqTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestCases/cubeRootTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#245#246#0" expanded="true" />
-                <element signature="e#277#278#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestCases/quadraticTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -135,62 +18,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/TestCases/Tests.java" />
-        <option value="$PROJECT_DIR$/TestCases/linearEqTest.java" />
-        <option value="$PROJECT_DIR$/TestCases/cubeRootTest.java" />
-        <option value="$PROJECT_DIR$/TestCases/quadraticTests.java" />
-        <option value="$PROJECT_DIR$/src/LinearEq.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-      </list>
-    </option>
-  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="20" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="820" />
-  </component>
+  <component name="ProjectId" id="1QtJ7dpAPMTdKurtQtOw0lRMQnV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="review" type="b2602c69:ProjectViewProjectNode" />
-              <item name="review" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="review" type="b2602c69:ProjectViewProjectNode" />
-              <item name="review" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="review" type="b2602c69:ProjectViewProjectNode" />
-              <item name="review" type="462c0819:PsiDirectoryNode" />
-              <item name="TestCases" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -202,7 +37,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -216,7 +51,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.All in review">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="review" />
@@ -224,39 +59,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="cubeRootTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in review" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="review" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="cubeRootTest" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="cubeRootTest.cubeRootableNum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="quadraticTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="review" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="cubeRootTest" />
-      <option name="METHOD_NAME" value="cubeRootableNum" />
+      <option name="MAIN_CLASS_NAME" value="quadraticTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="quadraticTests.quadraticNoAns" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="review" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="quadraticTests" />
+      <option name="METHOD_NAME" value="quadraticNoAns" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="cubeRootTest.nonRootableNum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="quadraticTests.quadraticOneAns" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="review" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="cubeRootTest" />
-      <option name="METHOD_NAME" value="nonRootableNum" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="linearEqTest.linearEquationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="review" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="linearEqTest" />
-      <option name="METHOD_NAME" value="linearEquationTest" />
+      <option name="MAIN_CLASS_NAME" value="quadraticTests" />
+      <option name="METHOD_NAME" value="quadraticOneAns" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -264,18 +98,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.linearEqTest.linearEquationTest" />
-      <item itemvalue="JUnit.cubeRootTest.cubeRootableNum" />
-      <item itemvalue="JUnit.cubeRootTest" />
-      <item itemvalue="JUnit.cubeRootTest.nonRootableNum" />
+      <item itemvalue="JUnit.quadraticTests" />
+      <item itemvalue="JUnit.quadraticTests.quadraticOneAns" />
+      <item itemvalue="JUnit.quadraticTests.quadraticNoAns" />
+      <item itemvalue="JUnit.All in review" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in review" />
+        <item itemvalue="JUnit.quadraticTests" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.cubeRootTest" />
-        <item itemvalue="JUnit.cubeRootTest.nonRootableNum" />
-        <item itemvalue="JUnit.cubeRootTest.cubeRootableNum" />
-        <item itemvalue="JUnit.linearEqTest.linearEquationTest" />
+        <item itemvalue="JUnit.quadraticTests.quadraticNoAns" />
+        <item itemvalue="JUnit.quadraticTests.quadraticOneAns" />
       </list>
     </recent_temporary>
   </component>
@@ -296,121 +130,22 @@
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="cubeRootTest - 2019.09.09 at 11h 14m 04s.xml">
-      <configuration name="cubeRootTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="cubeRootTest - 2019.09.09 at 11h 14m 31s.xml">
-      <configuration name="cubeRootTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="cubeRootTest - 2019.09.09 at 11h 16m 01s.xml">
-      <configuration name="cubeRootTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="cubeRootTest - 2019.09.09 at 11h 16m 11s.xml">
-      <configuration name="cubeRootTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="cubeRootTest - 2019.09.09 at 11h 17m 43s.xml">
-      <configuration name="cubeRootTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="cubeRootTest_nonRootableNum - 2019.09.09 at 11h 18m 24s.xml">
-      <configuration name="cubeRootTest.nonRootableNum" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="cubeRootTest - 2019.09.09 at 11h 18m 42s.xml">
-      <configuration name="cubeRootTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="cubeRootTest_nonRootableNum - 2019.09.09 at 11h 19m 09s.xml">
-      <configuration name="cubeRootTest.nonRootableNum" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="cubeRootTest - 2019.09.09 at 11h 19m 17s.xml">
-      <configuration name="cubeRootTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="cubeRootTest - 2019.09.11 at 10h 57m 44s.xml">
-      <configuration name="cubeRootTest" configurationId="JUnit" />
-    </history-entry>
-  </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="11926000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.260745" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32884097" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32884097" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/LinearEq.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestCases/quadraticTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestCases/linearEqTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestCases/cubeRootTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#245#246#0" expanded="true" />
-            <element signature="e#277#278#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
-          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="masterDetails">
     <states>

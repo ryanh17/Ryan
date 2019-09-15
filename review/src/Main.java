@@ -34,7 +34,7 @@ public class Main {
         }else if(Math.pow(b, 2) - (4*a*c) == 0){
             double ans = -b + (Math.sqrt(Math.pow(b, 2) - (4*a*c)));
             ans /= (2*a);
-            return "x = " + String.format("%.3g%n", ans);
+            return "x = " + Double.parseDouble(String.format("%.3g%n", ans));
         }else if (Math.pow(b, 2) - (4*a*c) < 0){
             return "no real solution";
         }

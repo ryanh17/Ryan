@@ -12,6 +12,6 @@ public class linearEqTest {
 
     @Test
     public void linearEquationTest(){
-        assertEquals( Main.linearEquation(2, 4, 10), "x = " + 3.0);
+        assertEquals( Main.linearEquation(2, 4.5, 11), "x = " + 3.25);
     }
 }
