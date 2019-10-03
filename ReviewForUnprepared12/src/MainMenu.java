@@ -6,7 +6,7 @@ public class MainMenu {
     int userChoice;
     //messages
     String introMessage = "Welcome to the Java help center. Select from one of the following options below.  When you are at the main menu enter '0' to exit.";
-    String options = "1. Control Flow\n2. Data Types\n0. Exit";
+    String options = "1. Control Flow\n2. Data Types\n3. Objects\n0. Exit";
 
 
     public void mainMenuStart(){
@@ -22,7 +22,10 @@ public class MainMenu {
                 ControlFlow controlFlow = new ControlFlow();
                 break;
             case 2:
-                System.out.println("Case 2");
+                DataTypes dataTypes = new DataTypes();
+                break;
+            case 3:
+                Objects objects = new Objects();
                 break;
         }
     }
