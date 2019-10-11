@@ -39,6 +39,6 @@ public class Planet {
 
     @Override
     public String toString() {
-        return "";
+        return "Orbit Time: " + orbitTime + " Moons: " + moons + " Designation: " + designation;
     }
 }
