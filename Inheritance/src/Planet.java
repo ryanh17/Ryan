@@ -37,6 +37,10 @@ public class Planet {
         this.designation = designation;
     }
 
+    public boolean equals(Planet obj){
+        return this.designation.equals(obj.designation);
+    }
+
     @Override
     public String toString() {
         return "Orbit Time: " + orbitTime + " Moons: " + moons + " Designation: " + designation;

@@ -43,8 +43,12 @@ public class Moon {
         this.designation = designation;
     }
 
+    public boolean equals(Moon obj){
+        return this.designation.equals(obj.designation);
+    }
+
     @Override
     public String toString() {
-        return "";
+        return "Planet: " + planet + "Orbit Time: " + orbitTime + "Atmosphere: " + atmosphere + "Designation " + designation;
     }
 }

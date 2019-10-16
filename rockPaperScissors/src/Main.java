@@ -36,7 +36,7 @@ public class Main {
             } //sets each random number generated to a string
 
             if((!userChoice.equals("paper"))&&(!userChoice.equals("rock")) && (!userChoice.equals("scissors")) && (!userChoice.equals("exit"))){
-                System.out.println("Please type \"rock\", \"paper\", \"scissors\" or \"exit\"");
+                System.out.println("  ");
             } //runs if user doesn't type rock, paper, scissors or exit
 
             //compares selections and chooses who wins, also adds to their score
