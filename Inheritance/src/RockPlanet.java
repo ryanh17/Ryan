@@ -13,4 +13,9 @@ public class RockPlanet extends Planet {
     public void setHabitable(boolean habitable) {
         this.habitable = habitable;
     }
+
+    @Override
+    public String toString() {
+        return "";
+    }
 }
