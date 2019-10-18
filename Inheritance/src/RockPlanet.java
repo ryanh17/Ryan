@@ -16,6 +16,6 @@ public class RockPlanet extends Planet {
 
     @Override
     public String toString() {
-        return "";
+        return "Orbit Time: " + getOrbitTime() + "Designation: " + getDesignation() + "Is Habitable?: " + habitable;
     }
 }
