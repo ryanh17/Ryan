@@ -1,6 +1,6 @@
 public class SalaryEmployee extends Employee{
     public int annualSalary;
-    public boolean hasBenefits;
+    public boolean hasBenefits = true;
 
     SalaryEmployee(String name, int hireYear, int annualSalary){
         super(name, hireYear);

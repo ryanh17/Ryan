@@ -12,12 +12,12 @@ public class PartTime extends HourlyEmployee{
 
     @Override
     public double annualSalary() {
-        return 0;
+        return monthlySalary()*12;
     }
 
     @Override
     public double monthlySalary() {
-        return 0;
+        return hoursPerWeek * hourlyWage * 4;
     }
 
 }
