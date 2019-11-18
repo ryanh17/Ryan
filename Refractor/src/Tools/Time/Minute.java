@@ -10,11 +10,11 @@ public class Minute implements Theticker{
         this.y = y;
     }
 
-    public int getY() {
+    public int getMinute() {
         return y;
     }
 
-    public void setY(int y) {
+    public void setMinute(int y) {
         this.y = y;
     }
     public String toString(){
@@ -22,7 +22,7 @@ public class Minute implements Theticker{
             return "0"+y;
         }
         else
-            return ""+y;
+            return Integer.toString(y);
     }
     public void tick(){
         y++;

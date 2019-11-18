@@ -1,28 +1,30 @@
 package Tools.Time;
 
-public class secon implements Theticker{
+public class Second implements Theticker{
     int z;
-    public secon(){
+    public Second(){
         z = 0;
     }
 
-    public int getZ() {
+    public Second(int z) {
+        this.z = z;
+    }
+
+    public int getSeconds() {
         return z;
     }
 
-    public void setZ(int z) {
+    public void setSeconds(int z) {
         this.z = z;
     }
 
-    public secon(int z) {
-        this.z = z;
-    }
+
     public String toString(){
         if(z < 10){
             return "0"+z;
         }
         else
-            return ""+z;
+            return Integer.toString(z);
     }
     public void tick(){
         z++;

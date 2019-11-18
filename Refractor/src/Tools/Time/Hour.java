@@ -9,11 +9,11 @@ public class Hour implements Theticker{
         this.x = x;
     }
 
-    public int getX() {
+    public int getHour() {
         return x;
     }
 
-    public void setX(int x) {
+    public void setHour(int x) {
         this.x = x;
     }
     public String toString(){
@@ -21,7 +21,7 @@ public class Hour implements Theticker{
             return "0"+x;
         }
         else
-            return ""+x;
+            return Integer.toString(x);
     }
     public void tick(){
         x++;

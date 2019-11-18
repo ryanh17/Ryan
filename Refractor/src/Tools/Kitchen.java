@@ -3,17 +3,17 @@ package Tools;
 import Model.items;
 import Model.pasta;
 import Model.pizza;
-import Model.sand;
+import Model.sandwich;
 
 import java.util.ArrayList;
 
-public class mainthing {
+public class Kitchen {
     private String name;
-    private ArrayList<Customer> ppl = new ArrayList<>();
-    private ArrayList<Order> ordds = new ArrayList<>();
-    private ArrayList<items> invent = new ArrayList<>();
+    private ArrayList<Customer> customers = new ArrayList<>();
+    private ArrayList<Order> orders = new ArrayList<>();
+    private ArrayList<items> inventory = new ArrayList<>();
 
-    public mainthing(String name){
+    public Kitchen(String name){
         this.name = name;
         startStuff();
     }
@@ -27,12 +27,12 @@ public class mainthing {
     }
 
     private void makePizza() {
-        invent.add(new pizza());
+        inventory.add(new pizza());
     }
     private void makePasta(){
-        invent.add(new pasta());
+        inventory.add(new pasta());
     }
     private void makesand(){
-        invent.add(new sand());
+        inventory.add(new sandwich());
     }
 }
