@@ -1,9 +1,9 @@
-package Tools;
+package tools;
 
-import Model.items;
-import Model.pasta;
-import Model.pizza;
-import Model.sandwich;
+import model.Items;
+import model.Pasta;
+import model.Pizza;
+import model.Sandwich;
 
 import java.util.ArrayList;
 
@@ -11,7 +11,7 @@ public class Kitchen {
     private String name;
     private ArrayList<Customer> customers = new ArrayList<>();
     private ArrayList<Order> orders = new ArrayList<>();
-    private ArrayList<items> inventory = new ArrayList<>();
+    private ArrayList<Items> inventory = new ArrayList<>();
 
     public Kitchen(String name){
         this.name = name;
@@ -22,17 +22,21 @@ public class Kitchen {
         for(int i = 0 ; i< 5;i++){
             makePizza();
             makePasta();
-            makesand();
+            makeSandwich();
         }
     }
 
     private void makePizza() {
-        inventory.add(new pizza());
+        inventory.add(new Pizza("Pizza", 20, true));
     }
     private void makePasta(){
-        inventory.add(new pasta());
+        inventory.add(new Pasta("Pasta", 15, false));
     }
-    private void makesand(){
-        inventory.add(new sandwich());
+    private void makeSandwich(){
+        inventory.add(new Sandwich("Sandwich", Sandwich.Size.SMALL));
+    }
+
+    public ArrayList<Items> getInventory() {
+        return inventory;
     }
 }

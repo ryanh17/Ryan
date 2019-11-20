@@ -1,6 +1,6 @@
-package Model;
+package model;
 
-public class sandwich extends items{
+public class Sandwich extends Items {
     public enum Size{
         SMALL(6.5), MEDIUM(8.0), LARGE(10.5);
         private double price;
@@ -11,7 +11,7 @@ public class sandwich extends items{
 
     Size size;
 
-    public sandwich(String name, Size size){
+    public Sandwich(String name, Size size){
         super(name,size.getPrice());
         this.size = size;
     }

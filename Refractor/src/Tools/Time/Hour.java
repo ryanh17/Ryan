@@ -1,4 +1,4 @@
-package Tools.Time;
+package tools.time;
 
 public class Hour implements Theticker{
     private int x;

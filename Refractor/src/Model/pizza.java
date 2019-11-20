@@ -1,9 +1,9 @@
-package Model;
+package model;
 
-public class pizza extends items{
+public class Pizza extends Items {
     boolean isDelux;
 
-    pizza(String name, double price, boolean isDelux){
+    public Pizza(String name, double price, boolean isDelux){
         super(name, price);
         this.isDelux = isDelux;
     }

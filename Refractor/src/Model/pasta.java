@@ -1,9 +1,9 @@
-package Model;
+package model;
 
-public class pasta extends items{
+public class Pasta extends Items {
     boolean isDelux;
 
-    pasta(String name, double price, boolean delux){
+    public Pasta(String name, double price, boolean delux){
         super(name, price);
         isDelux = delux;
     }

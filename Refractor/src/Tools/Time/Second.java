@@ -1,4 +1,4 @@
-package Tools.Time;
+package tools.time;
 
 public class Second implements Theticker{
     int z;

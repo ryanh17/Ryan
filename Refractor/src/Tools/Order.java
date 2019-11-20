@@ -1,24 +1,31 @@
-package Tools;
+package tools;
 
-import Model.items;
-import Tools.Time.Time;
+import model.Items;
+import tools.time.Time;
 
 import java.util.ArrayList;
 
 public class Order {
-    ArrayList<items> customerOrder;
+    ArrayList<Items> customerOrder;
     Time start;
     Time end;
     boolean out;
     boolean complete;
 
-    Order(ArrayList<items> items, Time start){
+    Order(ArrayList<Items> items, Time start, Kitchen kitchen){
         //if not in inventory add 10 minutes to order
         customerOrder = items;
         this.start = start;
         end = new Time(start);
         for(int i = 0; i < 20;i++){
             end.tick();
+        }
+        for (int i = 0; i<customerOrder.size();i++){
+            if (!(kitchen.getInventory().contains(customerOrder.get(i)))) {
+                for (int x = 0; x < 600; x++) {
+                    end.tick();
+                }
+            }
         }
         out = false;
         complete = false;
