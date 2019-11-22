@@ -1,5 +1,5 @@
 package tools.time;
 
-public interface Theticker {
+public interface TheTicker {
     public void tick();
 }

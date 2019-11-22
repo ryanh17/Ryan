@@ -1,11 +1,18 @@
 package tools.time;
 
-public class Second implements Theticker{
+public class Second implements TheTicker {
     int z;
+
+    //Requires:
+    //Modifies: this
+    //Effects: sets z to 0 seconds
     public Second(){
         z = 0;
     }
 
+    //Requires: int
+    //Modifies: this
+    //Effects: sets this.z to z
     public Second(int z) {
         this.z = z;
     }
@@ -26,6 +33,10 @@ public class Second implements Theticker{
         else
             return Integer.toString(z);
     }
+
+    //Requires:
+    //Modifies: this
+    //Effects: adds one second
     public void tick(){
         z++;
     }

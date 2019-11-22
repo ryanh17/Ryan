@@ -12,6 +12,13 @@ public class Order {
     boolean out;
     boolean complete;
 
+
+    //Requires: ArrayList, Time, Kitchen
+    //Modifies: this
+    //Effects: adds items from items ArrayList to customerOrder ArrayList
+    //          sets start time
+    //          default: end time is 20 seconds more than start time
+    //          if inventory doesn't have customer order item then add 10 mins (600 seconds)
     Order(ArrayList<Items> items, Time start, Kitchen kitchen){
         //if not in inventory add 10 minutes to order
         customerOrder = items;
