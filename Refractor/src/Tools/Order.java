@@ -9,8 +9,9 @@ public class Order {
     ArrayList<Items> customerOrder;
     Time start;
     Time end;
-    boolean out;
-    boolean complete;
+    boolean deliveryInProgress;
+    boolean delivered;
+    double orderCost;
 
 
     //Requires: ArrayList, Time, Kitchen
@@ -19,7 +20,7 @@ public class Order {
     //          sets start time
     //          default: end time is 20 seconds more than start time
     //          if inventory doesn't have customer order item then add 10 mins (600 seconds)
-    Order(ArrayList<Items> items, Time start, Kitchen kitchen){
+    public Order(ArrayList<Items> items, Time start, Kitchen kitchen){
         //if not in inventory add 10 minutes to order
         customerOrder = items;
         this.start = start;
@@ -28,23 +29,46 @@ public class Order {
             end.tick();
         }
         for (int i = 0; i<customerOrder.size();i++){
-            if (!(kitchen.getInventory().contains(customerOrder.get(i)))) {
-                for (int x = 0; x < 600; x++) {
-                    end.tick();
+            if ((kitchen.getInventory().contains(customerOrder.get(i)))) {
+
+            }else{
+                System.out.println(customerOrder.get(i));
+                System.out.println(kitchen.getInventory().get(i));
+                    for (int x = 0; x < 600; x++) {
+                        end.tick();
+                    }
                 }
-            }
         }
-        out = false;
-        complete = false;
+        deliveryInProgress = false;
+        delivered = false;
     }
 
+    //Requires:
+    //Modifies: this
+    //Effects: set deliveryInProgress boolean to true;
     public void deliveryInProgross(){
-        out = true;
+        deliveryInProgress = true;
     }
+
+    //Requires:
+    //Modifies: this
+    //Effects: sets delivered to true
     public void delivered(){
-        complete = true;
+        delivered = true;
     }
+
+    //Requires:
+    //Modifies: this
+    //Effects: adds price of each item in customer order to the total (orderCost)
     public double getTotalPrice(){
-        return 0;
+        for(Items i: customerOrder){
+            orderCost += i.getPrice();
+        }
+
+        return orderCost;
+    }
+
+    public Time getEndTime(){
+        return end;
     }
 }

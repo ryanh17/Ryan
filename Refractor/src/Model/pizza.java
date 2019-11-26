@@ -23,4 +23,10 @@ public class Pizza extends Items {
         }
     }
     //if delux add 3 bucks
+
+
+    @Override
+    public String toString() {
+        return super.getName() + " -Deluxe: " + isDelux;
+    }
 }

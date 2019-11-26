@@ -26,4 +26,9 @@ public class Sandwich extends Items {
     public double getHowMuch() {
         return getPrice();
     }
+
+    @Override
+    public String toString() {
+        return super.getName() + "-Size: " + size;
+    }
 }

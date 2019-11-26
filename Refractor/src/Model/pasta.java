@@ -23,4 +23,9 @@ public class Pasta extends Items {
             return getPrice();
         }
     }
+
+    @Override
+    public String toString() {
+        return super.getName() + " -Deluxe: " + isDelux;
+    }
 }
