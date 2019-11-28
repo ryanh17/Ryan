@@ -16,8 +16,9 @@ public class Kitchen {
     //Requires: String
     //Modifies: this
     //Effects: sets kitchen name, and calls method startStuff()
-    public Kitchen(String name){
+    public Kitchen(String name, Customer customer){
         this.name = name;
+        customers.add(customer);
         startStuff();
     }
 
@@ -55,5 +56,9 @@ public class Kitchen {
 
     public ArrayList<Items> getInventory() {
         return inventory;
+    }
+
+    public ArrayList<Customer> getCustomers() {
+        return customers;
     }
 }

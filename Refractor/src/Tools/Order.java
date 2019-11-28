@@ -19,25 +19,24 @@ public class Order {
     //Effects: adds items from items ArrayList to customerOrder ArrayList
     //          sets start time
     //          default: end time is 20 seconds more than start time
-    //          if inventory doesn't have customer order item then add 10 mins (600 seconds)
+    //          if inventory doesn't have customer order item then add 10 mins (300 ticks )
     public Order(ArrayList<Items> items, Time start, Kitchen kitchen){
         //if not in inventory add 10 minutes to order
         customerOrder = items;
         this.start = start;
         end = new Time(start);
-        for(int i = 0; i < 20;i++){
+        for(int t = 0; t < 20;t++){
             end.tick();
         }
-        for (int i = 0; i<customerOrder.size();i++){
-            if ((kitchen.getInventory().contains(customerOrder.get(i)))) {
 
-            }else{
-                System.out.println(customerOrder.get(i));
-                System.out.println(kitchen.getInventory().get(i));
-                    for (int x = 0; x < 600; x++) {
-                        end.tick();
-                    }
+        for (int i = 0; i<customerOrder.size();i++){
+            if (!(kitchen.getInventory().contains(customerOrder.get(i))) == false) {
+                System.out.println(kitchen.getInventory().contains(customerOrder.get(i)));
+                for (int x = 0; x < 300; x++) {
+                    end.tick();
                 }
+
+            }
         }
         deliveryInProgress = false;
         delivered = false;
