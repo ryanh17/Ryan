@@ -9,16 +9,13 @@ import java.util.ArrayList;
 
 public class Kitchen {
     private String name;
-    private ArrayList<Customer> customers = new ArrayList<>();
-    private ArrayList<Order> orders = new ArrayList<>();
     private ArrayList<Items> inventory = new ArrayList<>();
 
     //Requires: String
     //Modifies: this
     //Effects: sets kitchen name, and calls method startStuff()
-    public Kitchen(String name, Customer customer){
+    public Kitchen(String name){
         this.name = name;
-        customers.add(customer);
         startStuff();
     }
 
@@ -58,7 +55,4 @@ public class Kitchen {
         return inventory;
     }
 
-    public ArrayList<Customer> getCustomers() {
-        return customers;
-    }
 }

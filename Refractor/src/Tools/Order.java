@@ -9,6 +9,7 @@ public class Order {
     ArrayList<Items> customerOrder;
     Time start;
     Time end;
+    private Customer customer;
     boolean deliveryInProgress;
     boolean delivered;
     double orderCost;
@@ -20,8 +21,9 @@ public class Order {
     //          sets start time
     //          default: end time is 20 seconds more than start time
     //          if inventory doesn't have customer order item then add 10 mins (300 ticks )
-    public Order(ArrayList<Items> items, Time start, Kitchen kitchen){
+    public Order(ArrayList<Items> items, Time start, Kitchen kitchen, Customer customer){
         //if not in inventory add 10 minutes to order
+        this.customer = customer;
         customerOrder = items;
         this.start = start;
         end = new Time(start);
@@ -31,22 +33,18 @@ public class Order {
 
         for (int i = 0; i<customerOrder.size();i++){
             if (!(kitchen.getInventory().contains(customerOrder.get(i))) == false) {
-                System.out.println(kitchen.getInventory().contains(customerOrder.get(i)));
                 for (int x = 0; x < 300; x++) {
                     end.tick();
                 }
 
             }
         }
-        deliveryInProgress = false;
+        deliveryInProgress = true;
         delivered = false;
     }
 
-    //Requires:
-    //Modifies: this
-    //Effects: set deliveryInProgress boolean to true;
-    public void deliveryInProgross(){
-        deliveryInProgress = true;
+    public boolean isDeliveryInProgress() {
+        return deliveryInProgress;
     }
 
     //Requires:
@@ -70,4 +68,13 @@ public class Order {
     public Time getEndTime(){
         return end;
     }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public ArrayList<Items> getCustomerOrder() {
+        return customerOrder;
+    }
 }
+
