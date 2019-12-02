@@ -3,6 +3,7 @@ package ui;
 import model.Items;
 import model.Pasta;
 import model.Pizza;
+import model.Sandwich;
 import tools.Customer;
 import tools.Kitchen;
 import tools.Order;
@@ -19,6 +20,7 @@ public class Main {
         ArrayList<Items> combo1 = new ArrayList<>();
         combo1.add(new Pizza("Pizza", 20, true));
         combo1.add(new Pasta("Pasta", 15, false));
+        combo1.add(new Sandwich("BLT", Sandwich.Size.SMALL));
 
         //setup kitchen and start making stuff in kitchen
         Kitchen main = new Kitchen("Main Kitchen");
