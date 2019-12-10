@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
-    final static ArrayList<Integer> DAYS_PER_MONTH = new ArrayList<>(Arrays.asList(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31));
+
     /**
      *Finds day of the year
      * @param month integer from 1-12
@@ -12,11 +12,12 @@ public class Main {
      */
     public static String dayOfYear(int month, int dayOfMonth, int year) {
         int dayOfYear = dayOfMonth;
+        ArrayList<Integer> daysPerMonth = new ArrayList<>(Arrays.asList(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31));
 
         if(month >= 1 && month <= 12 && dayOfMonth >= 1 && year > 1){
-            if (dayOfMonth<= DAYS_PER_MONTH.get(month-1)) {
+            if (dayOfMonth<= daysPerMonth.get(month-1)) {
                 for (int i = 1; i < month; i++) {
-                    dayOfYear += DAYS_PER_MONTH.get(i - 1);
+                    dayOfYear += daysPerMonth.get(i - 1);
                 }
             }
         }else{
