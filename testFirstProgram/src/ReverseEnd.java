@@ -15,6 +15,6 @@ public class ReverseEnd {
      * @return input text with the substring from start to the end of the string reversed
      */
     public static String reverseEnd(String text, int start){
-
+        return "";
     }
 }
