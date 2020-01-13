@@ -5,8 +5,8 @@ import static org.junit.Assert.*;
 
 /**
  * Test when string is null and not null
- * test start negative & positive num
- * test start = 0 and start = text.length
+ * test when start is: negative num, positive num, 0, =text.length, 0 <= start <= text.length()
+ *
  */
 public class ReverseEndTest {
 
@@ -19,7 +19,7 @@ public class ReverseEndTest {
     @Test
     public void testValidStartInt(){
         assertEquals("Start Number Greater Than Text Length", ReverseEnd.reverseEnd("Hello, world",20));
-        assertEquals("Start Number Must be Greater Than 0", ReverseEnd.reverseEnd("Hello, world",-2));
+        assertEquals("Start Number Must be Greater or Equal To 0", ReverseEnd.reverseEnd("Hello, world",-2));
     }
 
     @Test
