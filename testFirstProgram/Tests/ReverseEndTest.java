@@ -4,8 +4,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Test when string is null and not null
- * test when start is: negative num, positive num, 0, =text.length, 0 <= start <= text.length()
+ * test when text.length is: 0, 1, >1
+ * test when text.length()-start is: 0, 1, even > 1, odd > 1
+ * test when start is: negative num, positive num, 0, 1, =text.length, 0 <= start <= text.length(), text.length - 1
  *
  */
 public class ReverseEndTest {
