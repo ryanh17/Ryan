@@ -21,6 +21,7 @@ public class RockPaperScissors {
 
     private void generateComputerInput(){
         int computerNumber = new Random().nextInt(3);
+        System.out.println(computerNumber);
         switch(computerNumber){
             case 0:
                 computerInput = "rock";
@@ -38,21 +39,26 @@ public class RockPaperScissors {
             userScore++;
             return "You won, computer chose " + computerInput;
         }else if(userInput.equals("rock") && computerInput.equals("paper")){
-            userScore--;
+            computerScore++;
             return "You lost, computer chose " + computerInput;
         }else if(userInput.equals("paper") && computerInput.equals("scissors")){
-            userScore--;
+            computerScore++;
             return "You lost, computer chose " + computerInput;
         }else if(userInput.equals("paper") && computerInput.equals("rock")){
             userScore++;
             return "You won, computer chose " + computerInput;
         }else if(userInput.equals("scissors") && computerInput.equals("rock")){
-            userScore--;
+            computerScore++;
             return "You lost, computer chose " + computerInput;
         }else if(userInput.equals("scissors") && computerInput.equals("paper")){
             userScore++;
             return "You won, computer chose " + computerInput;
         }
         return "invalid input";
+    }
+
+    @Override
+    public String toString() {
+        return compareUserInputToComputerInput() +". Your score: " + userScore + " Computer score: " + computerScore;
     }
 }

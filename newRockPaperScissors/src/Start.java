@@ -8,6 +8,6 @@ public class Start {
 
     public String startRockPaperScissors(){
         RockPaperScissors rpc = new RockPaperScissors();
-        return "";
+        return rpc.toString();
     }
 }
