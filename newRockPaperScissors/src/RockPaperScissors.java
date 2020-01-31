@@ -3,16 +3,18 @@ import java.util.Scanner;
 
 public class RockPaperScissors {
     private Scanner scan = new Scanner(System.in);
-    private String userInput;
+    private String userInput = "";
     private String computerInput;
     private int computerScore;
     private int userScore;
 
     RockPaperScissors(){
+    }
+
+    public String start(){
         getUserInput();
         generateComputerInput();
-        compareUserInputToComputerInput();
-
+        return compareUserInputToComputerInput() +". Your score: " + userScore + " Computer score: " + computerScore;
     }
 
     private void getUserInput(){
@@ -21,14 +23,16 @@ public class RockPaperScissors {
 
     private void generateComputerInput(){
         int computerNumber = new Random().nextInt(3);
-        System.out.println(computerNumber);
         switch(computerNumber){
             case 0:
                 computerInput = "rock";
+                break;
             case 1:
                 computerInput = "scissors";
+                break;
             case 2:
                 computerInput = "paper";
+                break;
         }
     }
 
@@ -57,8 +61,7 @@ public class RockPaperScissors {
         return "invalid input";
     }
 
-    @Override
-    public String toString() {
-        return compareUserInputToComputerInput() +". Your score: " + userScore + " Computer score: " + computerScore;
-    }
+//    public String getResults() {
+//        return compareUserInputToComputerInput() +". Your score: " + userScore + " Computer score: " + computerScore;
+//    }
 }
