@@ -13,6 +13,7 @@ public class RockPaperScissors {
     private static String PAPER = "paper";
     private static String SCISSORS = "scissors";
     private static String INVALIDINPUT = "Invalid Input";
+    private static String GREETINGMESSAGE = "Welcome to Rock Paper Scissors. Type \"rock\", \"paper\", or \"scissors\"";
 
     public RockPaperScissors(){
     }
@@ -20,7 +21,11 @@ public class RockPaperScissors {
     public String start(){
         getUserInput();
         generateComputerInput();
-        return compareUserInputToComputerInput() +". Your score: " + userScore + " Computer score: " + computerScore;
+        return compareUserInputToComputerInput();
+    }
+
+    private String getGreetingMessage(){
+        return GREETINGMESSAGE;
     }
 
     private void getUserInput(){
@@ -46,33 +51,35 @@ public class RockPaperScissors {
     }
 
     /**
-     *Compares user and computer choices, winner gets one point
-     * @return winning, losing, or tie message
+     *Compares user and computer choices
+     * @return 0 if tie game, 1 if user wins, -1 if user loses
      */
     private String compareUserInputToComputerInput(){
         if(userInput.equals(computerInput)){
-            return tieGameMessage();
+            return Integer.toString(0);
         }else if(userInput.equals(ROCK) && computerInput.equals(SCISSORS)){
             userScore++;
-            return userWinningMessage();
+            return Integer.toString(userScore);
         }else if(userInput.equals(ROCK) && computerInput.equals(PAPER)){
-            computerScore++;
-            return userLosingMessage();
+            userScore--;
+            return Integer.toString(userScore);
         }else if(userInput.equals(ROCK) && computerInput.equals(SCISSORS)){
-            computerScore++;
-            return userLosingMessage();
+            userScore--;
+            return Integer.toString(userScore);
         }else if(userInput.equals(PAPER) && computerInput.equals(ROCK)){
             userScore++;
-            return userWinningMessage();
+            return Integer.toString(userScore);
         }else if(userInput.equals(SCISSORS) && computerInput.equals(ROCK)){
-            computerScore++;
-            return userLosingMessage();
+            userScore--;
+            return Integer.toString(userScore);
         }else if(userInput.equals(SCISSORS) && computerInput.equals(PAPER)){
             userScore++;
-            return userWinningMessage();
+            return Integer.toString(userScore);
         }
         return INVALIDINPUT;
     }
+
+
 
     /**
      * method containing losing message
@@ -98,7 +105,7 @@ public class RockPaperScissors {
         return "Tie game, you both chose " + userInput;
     }
 
-//    public String getResults() {
-//        return compareUserInputToComputerInput() +". Your score: " + userScore + " Computer score: " + computerScore;
-//    }
+    public String getResults() {
+        return compareUserInputToComputerInput() +". Your score: " + userScore + " Computer score: " + computerScore;
+    }
 }
