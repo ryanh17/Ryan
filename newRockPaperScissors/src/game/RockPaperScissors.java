@@ -7,33 +7,37 @@ public class RockPaperScissors {
     private Scanner scan = new Scanner(System.in);
     private String userInput = "";
     private String computerInput;
-    private int computerScore;
     private int userScore;
-    private static String ROCK = "rock";
-    private static String PAPER = "paper";
-    private static String SCISSORS = "scissors";
-    private static String INVALIDINPUT = "Invalid Input";
-    private static String GREETINGMESSAGE = "Welcome to Rock Paper Scissors. Type \"rock\", \"paper\", or \"scissors\"";
+    private static final String ROCK = "rock";
+    private static final String PAPER = "paper";
+    private static final String SCISSORS = "scissors";
+    private static final String INVALID_INPUT = "Invalid Input";
 
     public RockPaperScissors(){
     }
 
+
+    /**
+     * Gets user input
+     * Generates computer input
+     * @return method that comapares user input to computer input
+     */
     public String start(){
         getUserInput();
         generateComputerInput();
         return compareUserInputToComputerInput();
     }
 
-    private String getGreetingMessage(){
-        return GREETINGMESSAGE;
-    }
-
+    /**
+     * Get user input using scanner and convert input to all lower case
+     */
     private void getUserInput(){
         userInput = scan.nextLine().toLowerCase();
     }
 
     /**
      * Generate computer input using random number generator
+     * If 0 set computerInput to rock, if 1 set computerInput to scissors, if 2 set computerInput to paper
      */
     private void generateComputerInput(){
         int computerNumber = new Random().nextInt(3);
@@ -52,7 +56,7 @@ public class RockPaperScissors {
 
     /**
      *Compares user and computer choices
-     * @return 0 if tie game, 1 if user wins, -1 if user loses
+     * @return 0 if tie game, 1 if user wins, -1 if user loses, and "Invalid Input" if input is invalid
      */
     private String compareUserInputToComputerInput(){
         if(userInput.equals(computerInput)){
@@ -76,36 +80,6 @@ public class RockPaperScissors {
             userScore++;
             return Integer.toString(userScore);
         }
-        return INVALIDINPUT;
-    }
-
-
-
-    /**
-     * method containing losing message
-     * @return losing message
-     */
-    private String userLosingMessage(){
-        return "You lost, computer chose " + computerInput;
-    }
-
-    /**
-     * method containing winning message
-     * @return winning message
-     */
-    private String userWinningMessage(){
-        return "You won, computer chose " + computerInput;
-    }
-
-    /**
-     * method containing tie game message
-     * @return tie message
-     */
-    private String tieGameMessage(){
-        return "Tie game, you both chose " + userInput;
-    }
-
-    public String getResults() {
-        return compareUserInputToComputerInput() +". Your score: " + userScore + " Computer score: " + computerScore;
+        return INVALID_INPUT;
     }
 }
