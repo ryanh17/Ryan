@@ -16,6 +16,12 @@ public class RockPaperScissors {
     public RockPaperScissors(){
     }
 
+    public RockPaperScissors(String computerInput, String userInput){
+        this.computerInput = computerInput;
+        this.userInput = userInput;
+        compareUserInputToComputerInput();
+    }
+
 
     /**
      * Gets user input
