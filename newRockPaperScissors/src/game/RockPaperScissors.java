@@ -5,9 +5,11 @@ import java.util.Scanner;
 
 public class RockPaperScissors {
     private Scanner scan = new Scanner(System.in);
-    private String userInput = "";
+    private String userInput;
+    private int randomNumber = new Random().nextInt(3);
     private String computerInput;
     private int userScore;
+    private String errorMessage;
     private static final String ROCK = "rock";
     private static final String PAPER = "paper";
     private static final String SCISSORS = "scissors";
@@ -16,9 +18,11 @@ public class RockPaperScissors {
     public RockPaperScissors(){
     }
 
-    public RockPaperScissors(String computerInput, String userInput){
-        this.computerInput = computerInput;
+    public RockPaperScissors(String userInput, int randomNumber){
+        //this.computerInput = computerInput;
         this.userInput = userInput;
+        this.randomNumber = randomNumber;
+        generateComputerInput();
         compareUserInputToComputerInput();
     }
 
@@ -26,7 +30,8 @@ public class RockPaperScissors {
     /**
      * Gets user input
      * Generates computer input
-     * @return method that comapares user input to computer input
+     * @return method that compares user input to computer input
+     *          (0 if tie game, 1 if user wins, -1 if user loses, and "Invalid Input" if input is invalid)
      */
     public String start(){
         getUserInput();
@@ -42,26 +47,31 @@ public class RockPaperScissors {
     }
 
     /**
-     * Generate computer input using random number generator
+     * Use randomNumber to determine computerInput
+     *      (randomNumber is a randomly generated integer between 0-2)
      * If 0 set computerInput to rock, if 1 set computerInput to scissors, if 2 set computerInput to paper
      */
     private void generateComputerInput(){
-        int computerNumber = new Random().nextInt(3);
-        switch(computerNumber){
+        switch(randomNumber){
             case 0:
                 computerInput = ROCK;
                 break;
             case 1:
-                computerInput = SCISSORS;
+                computerInput = PAPER;
                 break;
             case 2:
-                computerInput = PAPER;
+                computerInput = SCISSORS;
                 break;
         }
     }
 
     /**
      *Compares user and computer choices
+     *
+     * rock beats scissors
+     * scissors beats paper
+     * paper beats rock
+     *
      * @return 0 if tie game, 1 if user wins, -1 if user loses, and "Invalid Input" if input is invalid
      */
     private String compareUserInputToComputerInput(){
@@ -73,7 +83,7 @@ public class RockPaperScissors {
         }else if(userInput.equals(ROCK) && computerInput.equals(PAPER)){
             userScore--;
             return Integer.toString(userScore);
-        }else if(userInput.equals(ROCK) && computerInput.equals(SCISSORS)){
+        }else if(userInput.equals(PAPER) && computerInput.equals(SCISSORS)){
             userScore--;
             return Integer.toString(userScore);
         }else if(userInput.equals(PAPER) && computerInput.equals(ROCK)){
@@ -85,7 +95,21 @@ public class RockPaperScissors {
         }else if(userInput.equals(SCISSORS) && computerInput.equals(PAPER)){
             userScore++;
             return Integer.toString(userScore);
+        }else{
+            errorMessage = INVALID_INPUT;
         }
-        return INVALID_INPUT;
+        return errorMessage;
+    }
+
+    public String getComputerInput() {
+        return computerInput;
+    }
+
+    public int getUserScore() {
+        return userScore;
+    }
+
+    public String getErrorMessage() {
+        return errorMessage;
     }
 }
