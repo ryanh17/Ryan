@@ -3,6 +3,12 @@ package game;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ *This class is a foundation for creating the game Rock Paper Scissors.
+ * Start method gets user input and generates computer input, then compares input to determine winner.
+ * Start method returns 0 if tie game, 1 if user wins, -1 if user loses, and "Invalid Input" if input is invalid
+ */
+
 public class RockPaperScissors {
     private Scanner scan = new Scanner(System.in);
     private String userInput;
@@ -19,7 +25,6 @@ public class RockPaperScissors {
     }
 
     public RockPaperScissors(String userInput, int randomNumber){
-        //this.computerInput = computerInput;
         this.userInput = userInput;
         this.randomNumber = randomNumber;
         generateComputerInput();
@@ -101,14 +106,26 @@ public class RockPaperScissors {
         return errorMessage;
     }
 
+    /**
+     * Gets computer choice
+     * @return rock, paper, or scissors depending on what computer randomly chose
+     */
     public String getComputerInput() {
         return computerInput;
     }
 
+    /**
+     * Gets user score
+     * @return 0 if tie game, 1 if user wins, -1 if user loses, and "Invalid Input" if input is invalid
+     */
     public int getUserScore() {
         return userScore;
     }
 
+    /**
+     * Gets error message
+     * @return error message if invalid input occurred
+     */
     public String getErrorMessage() {
         return errorMessage;
     }
