@@ -1,11 +1,19 @@
 public class NumberCard extends Card{
+    private String value;
+    private Suits suits;
 
-    public NumberCard(int value){
-        super(value);
+    public NumberCard(int value, Suits suits){
+        this.value = Integer.toString(value);
+        this.suits = suits;
     }
 
     @Override
-    public int getValue() {
-        return 0;
+    public String getValue() {
+        return value;
+    }
+
+    @Override
+    public Suits getSuit() {
+        return suits;
     }
 }

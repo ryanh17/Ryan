@@ -1,10 +1,12 @@
 public abstract class Card {
-    private int value;
 
-    public Card(int value){
-        this.value = value;
+    public Card(){
+
     }
 
-    public abstract int getValue();
+
+    public abstract String getValue();
+
+    public abstract Suits getSuit();
 
 }
