@@ -21,4 +21,9 @@ public class NumberCard extends Card{
     public Suits getSuit() {
         return suits;
     }
+
+    @Override
+    public String toString() {
+        return "NumberCard: " + getValue() + " Suit: " + getSuit();
+    }
 }

@@ -29,5 +29,10 @@ public class FaceCard extends Card{
         return suits;
     }
 
+    @Override
+    public String toString() {
+        return "FaceCard: " + getValue() + " Suit: " + getSuit();
+    }
+
 
 }
