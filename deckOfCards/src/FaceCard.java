@@ -1,15 +1,27 @@
 public class FaceCard extends Card{
-    private String value;
+    private int value;
+    private final String JACK = "Jack";
+    private final String QUEEN = "Queen";
+    private final String KING = "King";
+    private final String INVALID = "INVALID";
     private Suits suits;
 
-    public FaceCard(String value, Suits suits){
+    public FaceCard(int value, Suits suits){
         this.value = value;
         this.suits = suits;
     }
 
     @Override
     public String getValue() {
-        return value;
+        if (value == 11) {
+            return JACK;
+        } else if (value == 12) {
+            return QUEEN;
+        } else if (value == 13) {
+            return KING;
+        } else{
+            return INVALID;
+        }
     }
 
     @Override

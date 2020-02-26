@@ -1,15 +1,20 @@
 public class NumberCard extends Card{
-    private String value;
+    private int value;
+    private final String ACE = "Ace";
     private Suits suits;
 
     public NumberCard(int value, Suits suits){
-        this.value = Integer.toString(value);
+        this.value = value;
         this.suits = suits;
     }
 
     @Override
     public String getValue() {
-        return value;
+        if (value == 1){
+            return ACE;
+        }else{
+            return Integer.toString(value);
+        }
     }
 
     @Override
