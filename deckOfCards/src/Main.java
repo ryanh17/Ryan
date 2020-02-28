@@ -1,3 +1,6 @@
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class Main {
@@ -19,6 +22,14 @@ public class Main {
 
         for(Card c : deckOfCards){
             System.out.println(c.toString());
+        }
+
+        System.out.println("SORTED- ------------------------------");
+
+        Collections.sort(deckOfCards);
+        Iterator<Card> cardIterator = deckOfCards.listIterator();
+        while(cardIterator.hasNext()){
+            System.out.println(cardIterator.next());
         }
 
     }

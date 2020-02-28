@@ -12,6 +12,11 @@ public class FaceCard extends Card{
     }
 
     @Override
+    public int getNumberValue(){
+        return value;
+    }
+
+    @Override
     public String getValue() {
         if (value == 11) {
             return JACK;
@@ -29,10 +34,19 @@ public class FaceCard extends Card{
         return suits;
     }
 
+
     @Override
     public String toString() {
         return "FaceCard: " + getValue() + " Suit: " + getSuit();
     }
 
-
+    @Override
+    public int compareTo(Card o) {
+        if (this.getNumberValue() > o.getNumberValue()){
+            return -1;
+        }else if (this.getNumberValue() < o.getNumberValue()){
+            return 1;
+        }
+        return 0;
+    }
 }
