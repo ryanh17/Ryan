@@ -1,7 +1,7 @@
 public enum Suits {
     HEARTS("Hearts", "Red"),
     SPADES("Spades", "Black"),
-    CLUBS("CLUBS", "Black"),
+    CLUBS("Clubs", "Black"),
     DIAMONDS("Diamonds", "Red");
 
     private final String suit;
