@@ -11,4 +11,16 @@ public enum Suits {
         this.suit = suit;
         this.color = color;
     }
+
+    public int getSuitValue(){
+        if(suit.equals("Spades")){
+            return 3;
+        }else if (suit.equals("Hearts")){
+            return 2;
+        } else if (suit.equals("Diamonds")){
+            return 1;
+        }else {
+            return 0;
+        }
+    }
 }

@@ -24,12 +24,20 @@ public class Main {
             System.out.println(c.toString());
         }
 
-        System.out.println("SORTED- ------------------------------");
+        System.out.println("-------------SORTED- by card value------------------------------");
 
         Collections.sort(deckOfCards);
         Iterator<Card> cardIterator = deckOfCards.listIterator();
         while(cardIterator.hasNext()){
             System.out.println(cardIterator.next());
+        }
+
+        System.out.println("-------------SORTED- by greatest suit------------------------------");
+        CardComparator cardComparator = new CardComparator();
+        Collections.sort(deckOfCards, cardComparator);
+        Iterator<Card> cardIterator1 = deckOfCards.listIterator();
+        while(cardIterator1.hasNext()){
+            System.out.println(cardIterator1.next());
         }
 
     }
