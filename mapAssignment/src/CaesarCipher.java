@@ -18,6 +18,8 @@ public class CaesarCipher {
             encryptionKey.put(alphabet[i-1], i);
             decryptionKey.put(i, alphabet[i-1]);
         }
+        encryptionKey.put('z', 0);
+        decryptionKey.put(0, 'z');
     }
 
     public String encrypt(){
