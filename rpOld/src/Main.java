@@ -15,15 +15,16 @@ public class Main {
         return null;
     }
 
-    public static void getLeafNodes(Node n) {
-        if (n.left == 0 && n.right == 0) {
+    public static void getLeafNodes(Node n){
+        if(n.left == 0 & n.right == 0){
             System.out.println(n);
-            }
-        else {
-            if (n.left != 0) {
+        }
+        else{
+            if(n.left != 0){
                 getLeafNodes(getNode(n.left));
+
             }
-            if (n.right != 0) {
+            if(n.right != 0) {
                 getLeafNodes(getNode(n.right));
             }
         }
